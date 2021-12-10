@@ -194,7 +194,7 @@ const List: React.FC<ToDoProps> = ({todoList, setToDo}) => {
 						</Thead>
 						<Tbody>
 							{renderIncompleteList()}
-							{!renderIncompleteList &&
+							{renderIncompleteList().length === 0 &&
 															<Tr>
 															<Td colspan={4}>
 																<small>No Items to Complete. Take a break.</small>
@@ -237,7 +237,7 @@ const List: React.FC<ToDoProps> = ({todoList, setToDo}) => {
 						</Thead>
 						<Tbody>
 							{renderCompletedList()}
-							{!renderCompletedList &&
+							{renderCompletedList().length === 0 &&
 							<Tr>
 								<Td colspan={4}>
 									<small>No Items Completed. Better get to it.</small>
