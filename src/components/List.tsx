@@ -233,6 +233,9 @@ const List: React.FC<ToDoProps> = ({todoList, setToDo}) => {
 						</Thead>
 						<Tbody>
 							{renderCompletedList()}
+							{!renderCompletedList &&
+								<small>No Items Completed. Better get to it.</small>
+							}
 						</Tbody>
 						<Tfoot>
 						<Tr>
