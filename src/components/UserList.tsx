@@ -22,7 +22,7 @@ interface ToDoProps {
 
 const UserList: React.FC<ToDoProps> = ({ todoList, setToDo, userList, setUserList }) => {
 	const node = React.useRef();
-	const [active, setActive] = React.useState(false);
+	const [active, setActive] = React.useState(0);
 	const toast = useToast();
 
 	const UsersLists = [...Array.from(new Set(userList.map((item) => item.userId)))];
